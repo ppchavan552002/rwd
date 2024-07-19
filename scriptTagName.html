@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function para(){
+            var para=document.getElementsByTagName('p')[1].innerHTML;
+            alert(para);
+        }
+    </script>
+    <p>this is a paragraph</p>
+    <p>here we are going to display paragraph first by getElementsByTagName() method </p>
+    <p>let's see simple Example</p>
+    <button onclick="para()">display the paragraph</button>
+
+    <script>
+        function display(){
+            var data=document.getElementById("para").innerHTML;
+            document.getElementById('data').innerHTML=data;
+        }
+    </script>
+    <p id="para"> display same data in h1 tag after click on button</p>
+    <button onclick="display()">Click</button>
+    <h1 id="data"></h1>
+</body>
+</html>

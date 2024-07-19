@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <!--<script>
+        function display() {
+            var genders = document.getElementsByName("gender");
+            var selectedGender;
+            for (var i = 0; i < genders.length; i++) {
+                if (genders[i].checked) {
+                    selectedGender = genders[i].value;
+                    break;
+                }
+            }
+            alert(selectedGender);
+        }
+    </script>
+-->
+    
+
+
+    <script>
+        function display() {
+            var fv=document.getElementById("F").value;
+            var mv=document.getElementById("M").value;
+            var fc=document.getElementById("F").checked;
+
+            if(fc==true)
+        {
+           document.getElementById('para').innerHTML=fv 
+        }
+        else{
+            document.getElementById('para').innerHTML=mv
+        }
+        }
+
+    </script>
+</head>
+<body>
+  
+    <form>
+        <input type="radio" name="gender" value="M" id="M"> Male
+        <input type="radio" name="gender" value="F" id="F"> Female
+        <br>
+        <input type="button" value="submit" onclick="display()"> 
+    </form>
+    <p id="para"></p>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        #seed{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(234, 44, 129);
+            position: absolute;
+            left: 50px;
+            right: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" onmousedown="handleMouseDown()">
+        click or drag
+    </div>
+    <script>
+        function handleMouseDown(){
+            document.write("Mouse Button Pressed Down")
+        }
+    </script>
+
+    <div id="seed" onmousemove="handleMouseMove(event)"></div>
+    <script>
+        function handleMouseMove(event){
+            const element=document.getElementById('seed');
+            element.style.left=event.clientX+'px';
+            element.style.bottom=event.clientY+'px';
+            element.style.right=event.clientZ+'px';
+            element.style.top=event.clientW+'px';
+        }
+    </script>
+    <div class="box" onmouseup="handleMouseup()">
+        click or up
+    </div>
+    <script>
+        function handleMouseup(){
+            document.write("Mouse Button Pressed Down")
+        }
+    </script>
+
+<div class="box" onmouseover="handleMouseover()">
+    click or over
+</div>
+<script>
+    function handleMouseover(){
+        document.write("Mouse Button Pressed Down")
+    }
+</script>
+
+<div class="box" onmouseout="handleMouseout()">
+    click or out
+</div>
+<script>
+    function handleMouseout(){
+        document.write("Mouse Button Pressed Down")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: blanchedalmond;
+        }
+        .container{
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            font-size: 18px;
+            border: 2px solid #ccc;
+            display: inline-block;
+            background-size: 50px 50px;
+        }
+        .repeate-bg{
+            background-image:url(images.jpeg);
+            /* background-repeat: ; */
+        }
+        .repeate-x-bg{
+            background-image:url(images.jpeg);
+            background-repeat:repeat-x;
+        }
+        .repeate-y-bg{
+            background-image:url(images.jpeg);
+            background-repeat: repeat-y;
+        }
+        .no-repeate-bg{
+            background-image:url(images.jpeg);
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>bg repeate example</h1>
+        <div class="box repeate-bg">
+            <p>this is repeate bg</p>
+        </div>
+        <div class="box repeate-x-bg">
+            <p>this is repeate bg</p>
+        </div>
+        <div class="box repeate-y-bg">
+            <p>this is repeate bg</p>
+        </div>
+        <div class="box no-repeate-bg">
+            <p>this is repeate bg</p>
+        </div>
+    </div>
+</body>
+</html>
